@@ -1,0 +1,20 @@
+using UnityEngine;
+using System.Collections;
+
+//属性的使用
+public class ExampleClass : MonoBehaviour {
+    // Show this float in the Inspector as a slider between 0 and 10
+    [Range(0.0F, 10.0F)]
+    public float myFloat = 0.0F;
+}
+You can make your own PropertyAttribute as well. We'll use the code for the RangeAttribute as an example. The attribute must extend the PropertyAttribute class. If you want, your property can take parameters and store them as public member variables.
+// This is not an editor script. The property attribute class should be placed in a regular script file.
+public class RangeAttribute : PropertyAttribute {
+	float min;
+	float max;
+	float mumu;
+	public RangeAttribute (float min, float max) {
+		this.min = min;
+		this.max = max;
+	}
+}
