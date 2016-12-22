@@ -12,7 +12,7 @@ You can make your own PropertyAttribute as well. We'll use the code for the Rang
 public class RangeAttribute : PropertyAttribute {
 	float min;
 	float max;
-	
+	float mumu;
 	public RangeAttribute (float min, float max) {
 		this.min = min;
 		this.max = max;
